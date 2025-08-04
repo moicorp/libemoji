@@ -9,7 +9,7 @@
 #include "SkScalar.h"
 #include "SkTextUtils.h"
 #include "SkTypeface.h"
-#include "codec/SkEncodedImageFormat.h"
+#include "SkEncodedImageFormat.h"
 
 class EgGenerator final {
 public:
