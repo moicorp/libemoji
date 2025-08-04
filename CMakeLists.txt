@@ -112,7 +112,7 @@ add_custom_target(skia
 )
 add_custom_command(
   OUTPUT tmp/libskia.a
-  COMMAND python tools/git-sync-deps
+  COMMAND python3 tools/git-sync-deps
   COMMAND ${gn_path} gen out/Static --args="is_debug=false　target_cpu=x64 \
     is_official_build=true \
     skia_use_system_freetype2=false skia_enable_svg=true \
