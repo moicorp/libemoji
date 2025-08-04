@@ -80,7 +80,7 @@ if(APPLE)
 else()
   set(THREADS_PREFER_PTHREAD_FLAG TRUE)
   find_package(Threads REQUIRED)
-  find_package(OpenGL REQUIRED)
+  find_package(OpenGL REQUIRED COMPONENTS OpenGL GLX)
 
   find_package(PkgConfig)
   pkg_check_modules(FONTCONFIG REQUIRED fontconfig)
@@ -95,7 +95,9 @@ else()
 
   target_link_libraries(example
     emoji
-    ${OPENGL_LIBRARIES}
+    skia
+    ${OPENGL_opengl_LIBRARY}
+    ${OPENGL_glx_LIBRARY}
     ${FONTCONFIG_LIBRARIES}
     ${CMAKE_THREAD_LIBS_INIT}
     ${CMAKE_DL_LIBS}
