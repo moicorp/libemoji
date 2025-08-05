@@ -19,7 +19,7 @@ EgLine::MeasureSpec EgLine::measureAdjusted() {
     SkRect bounds;
     MeasureSpec spec;
 
-    SkScalar minTextSize = fLineHeight * SkDoubleToScalar(0.9);
+    SkScalar minTextSize = fLineHeight * SkDoubleToScalar(0.5);
     SkScalar maxTextSize = fLineHeight * SkIntToScalar(10);
 
     SkRect prevBounds = SkRect::MakeEmpty();
